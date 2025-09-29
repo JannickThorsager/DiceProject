@@ -11,7 +11,6 @@ public class RollOneDie {
         System.out.println();
 
         playOneDie();
-
         System.out.println();
         System.out.println("Tak for at spille, rul en terning.");
     }
@@ -43,7 +42,7 @@ public class RollOneDie {
     }
 
     private static int rollDie() {
-        return (int) (Math.random() * 6 + 1);
+return (int) (Math.random() * 6 + 1);
     }
 
     private static void updateStatistics() {
