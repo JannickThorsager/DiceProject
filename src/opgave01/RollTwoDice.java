@@ -1,4 +1,5 @@
-package examples;
+package examples; //denne fil ligger i opgave01 folderen, så package opgave01
+
 
 import java.util.Scanner;
 
@@ -44,6 +45,9 @@ public class RollTwoDice {
             }
             System.out.println("\n");
 
+            //Lidt kompliceret måde at udskrive hvad man rullede. I ved at der er to terninger så overstående kan erstates af
+            System.out.println("Du rullede: " + faces[0] + " og " + faces[1]);
+
             updateStatistics(faces, faceCounts);
 
             System.out.print("Rul to terninger? ('ja/nej') ");
@@ -62,8 +66,11 @@ public class RollTwoDice {
         return faces;
     }
 
+    //I behøver ikke faceCounts parameteren da I har en attribut faceCounts
     private static void updateStatistics(int[] faces, int[] faceCounts) {
         rollCount += 2;
+        //I laver beregningen faces[0] + faces[1] 3 gange, så jeg ville lave en variable og kun lave beregningen 1 gang.
+        int faceTotal = faces[0] + faces[1];
         sum += faces[0] + faces[1];
         if (faces[0] + faces[1] > maxSum) {
             maxSum = faces[0] + faces[1];
